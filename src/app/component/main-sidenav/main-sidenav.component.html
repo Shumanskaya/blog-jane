@@ -1,0 +1,10 @@
+<div class="main-sidenav">
+  <div class="main-sidenav__wrapper main-sidenav__wrapper--{{style}}"
+  [ngClass]="isCloseSidenav ? 'main-sidenav__wrapper--close' : '' "
+  >
+    <div class="main-sidenav__close" (click)="closeSidenav()"><---</div>
+    <div class="main-sidenav__list" *ngFor="let item of categories">
+      <div class="main-sidenav__item">{{item}}</div>
+    </div>
+  </div>
+</div>

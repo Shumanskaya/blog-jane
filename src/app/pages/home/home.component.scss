@@ -1,0 +1,44 @@
+@import "./src/styles.scss";
+
+.home__wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: stretch;
+  flex-wrap: wrap;
+}
+
+.home__block {
+  width: 50%;
+  height: 50vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.home__block-link {
+  min-width: 200px;
+  text-align: left;
+}
+
+.home__link {
+  color: white;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.home__recipe {
+  background-color: $recipe-main-color;
+}
+
+.home__olfactory {
+  background-color: $olfactory-main-color;
+}
+
+.home__travel {
+  background-color: $travel-main-color;
+}
+
+.home__other {
+  background-color: $other-main-color;
+}
