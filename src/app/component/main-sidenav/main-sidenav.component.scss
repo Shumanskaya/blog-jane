@@ -15,7 +15,9 @@
   position: relative;
   transition: width .5s ease;
 
-  background-color: lightslategray;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .main-sidenav__wrapper--recipe {
@@ -66,22 +68,13 @@
 }
 
 .sidenav-btn {
-  width: 80%;
-  margin: auto;
+  width: auto;
+  margin: 0 auto 8px;
   padding: 16px 0;
-  background-color: #dad3d3;
+  background-color: #F2F2F2;
   color: black;
   border-radius: 4px;
-  position: absolute;
-  bottom: 22px;
   text-align: center;
   cursor: pointer;
 }
 
-.sidenav-btn--bg:before {
-  content: 'Вернуться в меню';
-}
-
-.sidenav-btn--sm:before {
-  content: '\2799';
-}

@@ -1,7 +1,7 @@
 <div class="recipe-detail" *ngFor="let recipe of recipe">
   <div class="recipe-detail__row">
     <div class="recipe-detail__header">
-      <p class="recipe-detail__title">{{recipe.title}}</p>
+      <p class="recipe-detail__title g-title">{{recipe.title}}</p>
       <p class="recipe-detail__description">
         {{recipe.description}}
       </p>
@@ -11,7 +11,7 @@
     </div>
   </div>
   <div class="recipe-detail__row">
-    <p class="recipe-detail__subtitle">Список продуктов</p>
+    <p class="recipe-detail__subtitle g-subtitle">Список продуктов</p>
     <ul class="recipe-detail__list">
       <li class="recipe-detail__item" *ngFor="let list of recipe.structure">{{list.title}}
         <span> - {{list.quantity}}</span>;

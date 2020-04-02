@@ -1,24 +1,44 @@
-/* You can add global styles to this file, and also import other style files */
+/*fonts*/
+
+@import url('https://fonts.googleapis.com/css2?family=Lora&family=Roboto:wght@300&display=swap');
+$g-title: 1.7em;
+$g-subtitle: 1.4em;
+
+.g-title {
+  font-family: 'Lora', serif;
+  font-size: $g-title;
+}
+
+.g-subtitle {
+  font-family: 'Lora', serif;
+  font-size: $g-subtitle;
+}
+
+/*recipe*/
+$recipe-main-color: #CABABA;
+$recipe-second-color: #7D967D;
+
+/*olfactory*/
+$olfactory-main-color: #E6C6AC;
+$olfactory-second-color: #759796;
+
+/*travel*/
+$travel-main-color: #729595;
+$travel-second-color: #E7C09F;
+
+/*other*/
+$other-main-color: #93BF93;
+$other-second-color: #DE9A9A;
+
+
+/*global*/
+$font-main-color: #1A1A1A;
+$light-color: #F2F2F2;
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+  color: $font-main-color;
 }
-
-/*fonts*/
-
-$g-title: 1.7em;
-$g-subtitle: 1.4em;
-
-
-/*recipe*/
-$recipe-main-color: #CCCC99;
-
-/*olfactory*/
-$olfactory-main-color: #669966;
-
-/*travel*/
-$travel-main-color: #996666;
-
-/*other*/
-$other-main-color: #996699;

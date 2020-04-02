@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class OlfactoryComponent implements OnInit {
 
+  public type = 'olfactory';
+
   constructor() { }
 
   ngOnInit() {

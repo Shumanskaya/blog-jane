@@ -10,7 +10,6 @@ import {Subscription} from 'rxjs';
 })
 export class RecipeListComponent implements OnInit {
 
-  public recipe;
   public subscription: Subscription;
   public type: string;
 
@@ -18,9 +17,7 @@ export class RecipeListComponent implements OnInit {
     this.subscription = route.params.subscribe(value => this.type = value.id);
   }
 
-
   ngOnInit() {
-    console.log(this.route.params);
   }
 
 }

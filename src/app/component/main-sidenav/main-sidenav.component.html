@@ -1,18 +1,19 @@
 <div class="main-sidenav">
   <div class="main-sidenav__wrapper main-sidenav__wrapper--{{type}}"
-       [ngClass]="isCloseSidenav ? 'main-sidenav__wrapper--close' : '' "
   >
-    <div class="main-sidenav__close" (click)="closeSidenav()">&#10137;</div>
-    <div class="main-sidenav__list" *ngIf="!isCloseSidenav">
+    <div class="main-sidenav__list">
       <a class="main-sidenav__item"
          *ngFor="let item of navigation"
          [routerLink]="['/'+type, item.id]"
       >{{item.name}}</a>
     </div>
 
-    <div class="sidenav-btn"
-         [ngClass]="!isCloseSidenav ? 'sidenav-btn--bg' : 'sidenav-btn--sm'"
-         [routerLink]="'/'"></div>
+    <div class="btn-wrapper">
 
+      <div class="sidenav-btn"
+           [routerLink]="'/'">Главное меню
+      </div>
+
+    </div>
   </div>
 </div>
