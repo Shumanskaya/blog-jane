@@ -1,6 +1,6 @@
-import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
-import { MenuService } from './menu.service';
+import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
+import { NavigationService } from './navigation.service';
+import {ActivatedRoute, Router} from '@angular/router';
 
 @Component({
   selector: 'app-main-sidenav',
@@ -9,21 +9,29 @@ import { MenuService } from './menu.service';
 })
 export class MainSidenavComponent implements OnInit {
 
-  style: string;
-  categories: Array<any>;
+  @Input() type: string;
+  public navigations;
+  public navigation;
+  public isCloseSidenav = false;
 
-  constructor(private route: ActivatedRoute, menuCategories: MenuService) {
-    this.style = route.snapshot.url[0].path;
-    this.categories = menuCategories.getThatMenu(this.style);
+  constructor(private nav: NavigationService) {
+    this.navigations = nav.getCategories();
   }
 
-  isCloseSidenav = false;
+  getNavigationType() {
+    this.navigations.filter(value => {
+      if (value.name === this.type) {
+        this.navigation = value.category;
+      }
+    });
+  }
 
   closeSidenav() {
     this.isCloseSidenav ? this.isCloseSidenav = false : this.isCloseSidenav = true;
   }
 
   ngOnInit() {
+    this.getNavigationType();
   }
 
 }

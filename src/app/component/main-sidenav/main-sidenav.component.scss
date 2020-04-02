@@ -1,5 +1,12 @@
 @import "./src/styles.scss";
 
+.main-sidenav {
+  position: sticky;
+  left: 0;
+  top: 0;
+  margin-right: 50px;
+}
+
 .main-sidenav__wrapper {
   width: 300px;
   height: 100vh;
@@ -30,17 +37,15 @@
 .main-sidenav__wrapper--close {
   width: 50px;
   padding: 0;
-
-  .main-sidenav__list {
-    display: none;
-  }
 }
 
 .main-sidenav__close {
   position: absolute;
   top: 22px;
   right: 22px;
+  font-size: 32px;
   cursor: pointer;
+  transform: rotate(180deg);
 }
 
 .main-sidenav__list {
@@ -50,4 +55,33 @@
 
 .main-sidenav__item {
   margin-top: 22px;
+  cursor: pointer;
+  text-decoration: none;
+  color: black;
+}
+
+.main-sidenav__item:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.sidenav-btn {
+  width: 80%;
+  margin: auto;
+  padding: 16px 0;
+  background-color: #dad3d3;
+  color: black;
+  border-radius: 4px;
+  position: absolute;
+  bottom: 22px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.sidenav-btn--bg:before {
+  content: 'Вернуться в меню';
+}
+
+.sidenav-btn--sm:before {
+  content: '\2799';
 }

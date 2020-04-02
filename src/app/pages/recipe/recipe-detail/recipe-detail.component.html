@@ -1,0 +1,32 @@
+<div class="recipe-detail" *ngFor="let recipe of recipe">
+  <div class="recipe-detail__row">
+    <div class="recipe-detail__header">
+      <p class="recipe-detail__title">{{recipe.title}}</p>
+      <p class="recipe-detail__description">
+        {{recipe.description}}
+      </p>
+    </div>
+    <div class="recipe-detail__image">
+      <img class="image" src="{{recipe.image}}" alt="">
+    </div>
+  </div>
+  <div class="recipe-detail__row">
+    <p class="recipe-detail__subtitle">Список продуктов</p>
+    <ul class="recipe-detail__list">
+      <li class="recipe-detail__item" *ngFor="let list of recipe.structure">{{list.title}}
+        <span> - {{list.quantity}}</span>;
+      </li>
+    </ul>
+  </div>
+  <div class="recipe-detail__row" *ngFor="let step of recipe.recipe, let i = index">
+    <div class="recipe-detail__number">{{i + 1}}</div>
+    <div class="recipe-detail__header">
+      <div class="recipe-detail__step">
+        {{step.description}}
+      </div>
+    </div>
+    <div class="recipe-detail__image">
+      <img class="image" src="{{step.images}}" alt="">
+    </div>
+  </div>
+</div>

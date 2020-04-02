@@ -1,18 +1,10 @@
 <div class="recipe">
   <div class="recipe__wrapper">
-    <app-main-sidenav></app-main-sidenav>
+    <app-main-sidenav
+      [type]="type"
+    ></app-main-sidenav>
     <div class="recipe__content">
-      <p class="recipe__title">Рецепты</p>
-      <p class="recipe__description">
-        Привет! Это раздел с рецептами. Возможно, ты умеешь готовить гораздо круче чем я - но тогда просто прочитай
-        новые
-        рецепты и мотай на ус - иногда может оказаться, что ты совсем не круче других
-      </p>
-      <p class="recipe__description">
-        А ниже ты можешь увидеть новые добавления
-      </p>
-      <app-recipe-short></app-recipe-short>
-      <app-recipe-list></app-recipe-list>
+      <router-outlet></router-outlet>
     </div>
   </div>
 </div>

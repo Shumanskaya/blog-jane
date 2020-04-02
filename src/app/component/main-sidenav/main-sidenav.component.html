@@ -1,10 +1,18 @@
 <div class="main-sidenav">
-  <div class="main-sidenav__wrapper main-sidenav__wrapper--{{style}}"
-  [ngClass]="isCloseSidenav ? 'main-sidenav__wrapper--close' : '' "
+  <div class="main-sidenav__wrapper main-sidenav__wrapper--{{type}}"
+       [ngClass]="isCloseSidenav ? 'main-sidenav__wrapper--close' : '' "
   >
-    <div class="main-sidenav__close" (click)="closeSidenav()"><---</div>
-    <div class="main-sidenav__list" *ngFor="let item of categories">
-      <div class="main-sidenav__item">{{item}}</div>
+    <div class="main-sidenav__close" (click)="closeSidenav()">&#10137;</div>
+    <div class="main-sidenav__list" *ngIf="!isCloseSidenav">
+      <a class="main-sidenav__item"
+         *ngFor="let item of navigation"
+         [routerLink]="['/'+type, item.id]"
+      >{{item.name}}</a>
     </div>
+
+    <div class="sidenav-btn"
+         [ngClass]="!isCloseSidenav ? 'sidenav-btn--bg' : 'sidenav-btn--sm'"
+         [routerLink]="'/'"></div>
+
   </div>
 </div>
