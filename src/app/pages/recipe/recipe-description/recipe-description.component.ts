@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { RecipeService } from '../recipe.service';
 
 @Component({
   selector: 'app-recipe-description',
@@ -7,9 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RecipeDescriptionComponent implements OnInit {
 
-  constructor() { }
+  public lastRecipes = [];
+
+  constructor(private rec: RecipeService) {
+    this.lastRecipes = rec.getLastRecipe();
+  }
 
   ngOnInit() {
+    console.log(this.lastRecipes);
   }
 
 }

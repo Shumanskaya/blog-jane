@@ -6,6 +6,10 @@ import { Recipe } from './recipe';
 })
 export class RecipeService {
   getRecipe = () => allRecipe;
+  getLastRecipe = () => allRecipe.filter((value, i, arr) => {
+    const lastIndex = arr.length - 1;
+    return i > lastIndex - 3;
+  })
 }
 
 const allRecipe: Array<Recipe> = [
@@ -150,6 +154,76 @@ const allRecipe: Array<Recipe> = [
       {
         description: 'Муку залить яйцами, потом кефиром или молоком, потом перемешать и жарить на масляной сквородке сколько захочешь',
         images: ['https://static.1000.menu/img/content/18842/oladi-na-kefire-v-multivarke_1486011649_13_max.jpg']
+      }
+    ]
+  },
+  {
+    type: 'soup',
+    id: '5',
+    title: 'Огуречный суп',
+    description: 'Легкий, подхожит для жаркого дня. Быстрее окрошки, если у вас есть мясорубка',
+    image: 'https://www.gastronom.ru/binfiles/images/20141007/b80b9ca1.jpg',
+    structure: [
+      {
+        title: 'Кефир',
+        quantity: '1 л'
+      },
+      {
+        title: 'Огурцы',
+        quantity: '1 кг'
+      },
+      {
+        title: 'Зелень',
+        quantity: 'по вкусу'
+      },
+    ],
+    recipe: [
+      {
+        description: 'Огурцы потереть на терке, либо порезать мелкой тонкой соломкой',
+        images: ['https://img07.rl0.ru/eda/c620x415i/s1.eda.ru/StaticContent/Photos/130829212936/130904195334/p_O.jpg']
+      },
+      {
+        description: 'Залить по кефиром и добавить зелени по вкусу. А так же других специй по необходимости',
+        images: ['https://img07.rl0.ru/eda/c620x415i/s1.eda.ru/StaticContent/Photos/130829212936/130904195334/p_O.jpg']
+      }
+    ]
+  },
+  {
+    type: 'main-dishes',
+    id: '6',
+    title: 'Нагетсы из свинины',
+    description: 'Сытные с быстрые в приготовлении. Главное - купить хорошие панировочные сухари',
+    image: 'https://s12.stc.all.kpcdn.net/share/i/12/10625283/inx960x640.jpg',
+    structure: [
+      {
+        title: 'свинина',
+        quantity: '300 гр'
+      },
+      {
+        title: 'Панировочные сухари',
+        quantity: '100 гр'
+      },
+      {
+        title: 'Яйцо',
+        quantity: '2 шт'
+      },
+      {
+        title: 'Специи',
+        quantity: 'по вкусу'
+      }
+    ],
+    recipe: [
+      {
+        description: 'Порезать свинину на ровные кусочки. Важно не резать очень большими, чтобы точно хорошо прожарилось мясо',
+        images: ['https://www.povarenok.ru/data/cache/2020mar/09/23/2675027_53808-640x480.jpg']
+      },
+      {
+        description: 'В отдельной миске смешать сухари и специи. В другой миске слегка взбить яйца',
+        images: ['https://www.povarenok.ru/data/cache/2020mar/09/23/2675027_53808-640x480.jpg']
+      },
+      {
+        description: 'Макаем кусок в миску с яйцом, затем обваливаем в миске с панировочными сухарями и кидаем на сковородку',
+        images: ['https://www.povarenok.ru/data/cache/2020mar/09/23/2675027_53808-640x480.jpg']
       }
     ]
   },
