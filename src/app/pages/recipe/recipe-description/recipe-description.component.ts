@@ -15,7 +15,6 @@ export class RecipeDescriptionComponent implements OnInit {
   }
 
   ngOnInit() {
-    console.log(this.lastRecipes);
   }
 
 }
