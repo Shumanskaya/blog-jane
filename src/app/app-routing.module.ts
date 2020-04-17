@@ -3,16 +3,16 @@ import { Routes, RouterModule } from '@angular/router';
 import {HomeComponent} from './pages/home/home.component';
 import {RecipeComponent} from './pages/recipe/recipe.component';
 import {OlfactoryComponent} from './pages/olfactory/olfactory.component';
-import {RecipeListComponent} from './pages/recipe/recipe-list/recipe-list.component';
 import {RecipeDetailComponent} from './pages/recipe/recipe-detail/recipe-detail.component';
 import {RecipeDescriptionComponent} from './pages/recipe/recipe-description/recipe-description.component';
+import {RecipeContentComponent} from './pages/recipe/recipe-content/recipe-content.component';
 
 const routes: Routes = [
   {path: '', component: HomeComponent},
   {path: 'recipe', component: RecipeComponent,
     children: [
       {path: '', component: RecipeDescriptionComponent},
-      {path: ':id', component: RecipeListComponent},
+      {path: ':id', component: RecipeContentComponent},
       {path: ':id/:id', component: RecipeDetailComponent},
     ]},
   {path: 'olfactory', component: OlfactoryComponent},

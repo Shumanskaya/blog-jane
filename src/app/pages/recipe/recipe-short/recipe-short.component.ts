@@ -1,7 +1,5 @@
 import {Component, Input, OnChanges, OnInit} from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
 import {RecipeService} from '../recipe.service';
-import {Subscription} from 'rxjs';
 
 @Component({
   selector: 'app-recipe-short',
@@ -13,19 +11,12 @@ export class RecipeShortComponent implements OnInit, OnChanges {
   @Input() type;
   public recipes;
   public recipe;
-  public subscription: Subscription;
 
-  constructor(private rec: RecipeService, private route: ActivatedRoute) {
-    this.recipes = rec.getRecipe();
-    this.subscription = route.params.subscribe(value => this.type = value.id);
-  }
-
-  getRecipe() {
-    this.recipe = this.recipes.filter(value => value.type === this.type);
+  constructor(private rec: RecipeService) {
   }
 
   ngOnChanges(): void {
-    this.getRecipe();
+    this.recipes = this.rec.getTypeRecipe(this.type);
   }
 
   ngOnInit() {

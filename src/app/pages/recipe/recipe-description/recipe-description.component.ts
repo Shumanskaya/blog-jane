@@ -1,10 +1,10 @@
-import { Component, OnInit } from '@angular/core';
-import { RecipeService } from '../recipe.service';
+import {ChangeDetectionStrategy, Component, OnInit} from '@angular/core';
+import {RecipeService} from '../recipe.service';
 
 @Component({
   selector: 'app-recipe-description',
   templateUrl: './recipe-description.component.html',
-  styleUrls: ['./recipe-description.component.scss']
+  styleUrls: ['./recipe-description.component.scss'],
 })
 export class RecipeDescriptionComponent implements OnInit {
 

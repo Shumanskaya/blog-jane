@@ -6,6 +6,7 @@ import { Recipe } from './recipe';
 })
 export class RecipeService {
   getRecipe = () => allRecipe;
+  getTypeRecipe = (type) => allRecipe.filter(value => value.type === type);
   getLastRecipe = () => allRecipe.filter((value, i, arr) => {
     const lastIndex = arr.length - 1;
     return i > lastIndex - 3;

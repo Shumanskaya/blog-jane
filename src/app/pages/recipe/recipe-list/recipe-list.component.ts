@@ -1,26 +1,37 @@
-import {Component, OnInit, Output} from '@angular/core';
-import {RecipeService} from '../recipe.service';
+import {Component, Input, OnChanges, OnInit, SimpleChanges} from '@angular/core';
 import {NavigationService} from '../../../component/main-sidenav/navigation.service';
-import {ActivatedRoute} from '@angular/router';
-import {Observable, Subject, Subscription} from 'rxjs';
 
 @Component({
   selector: 'app-recipe-list',
   templateUrl: './recipe-list.component.html',
-  styleUrls: ['./recipe-list.component.scss']
+  styleUrls: ['./recipe-list.component.scss'],
 })
-export class RecipeListComponent implements OnInit {
+export class RecipeListComponent implements OnInit, OnChanges {
 
-  public subscriptionType: Subscription;
-  public type: string;
-  public name;
-  public categories;
+  @Input() type: string;
+  public navigations = [];
+  public name: string;
 
-  constructor(private rec: RecipeService, private route: ActivatedRoute, private navigation: NavigationService) {
-    this.subscriptionType = route.params.subscribe(value => this.type = value.id);
-
-    this.categories = navigation.getCategories();
+  constructor(private navigation: NavigationService) {
+    this.navigations = navigation.getCategories();
   }
+
+  getName(type) {
+    this.navigations.filter(nav => {
+      if (nav.name === 'recipe') {
+        nav.category.filter(cat => {
+          if (cat.id === type) {
+            this.name = cat.name;
+          }
+        });
+      }
+    });
+  }
+
+  ngOnChanges(changes: SimpleChanges): void {
+    this.getName(this.type);
+  }
+
 
   ngOnInit() {
   }
