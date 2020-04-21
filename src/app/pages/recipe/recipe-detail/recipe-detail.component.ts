@@ -15,7 +15,7 @@ export class RecipeDetailComponent implements OnInit {
   public recipe: Array<Recipe>;
 
   constructor(private route: ActivatedRoute, private rec: RecipeService ) {
-    this.path = route.snapshot.params.id;
+    this.path = route.snapshot.params.path;
     this.recipes = this.rec.getRecipe();
   }
 

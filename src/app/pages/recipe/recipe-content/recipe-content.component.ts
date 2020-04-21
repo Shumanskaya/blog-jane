@@ -15,7 +15,7 @@ export class RecipeContentComponent implements OnInit {
 
 
   constructor(private recipe: RecipeService, private route: ActivatedRoute) {
-    this.subscriptionType = route.params.subscribe(value => this.type = value.id);
+    this.subscriptionType = route.params.subscribe(value => this.type = value.path);
   }
 
   ngOnInit() {

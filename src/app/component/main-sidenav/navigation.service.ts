@@ -15,27 +15,27 @@ const categories: Array<Navigation> = [
     category: [
       {
         name: 'Салатики',
-        id: 'salad'
+        path: 'salad'
       },
       {
         name: 'Супчики',
-        id: 'soup'
+        path: 'soup'
       },
       {
         name: 'Вторые блюда',
-        id: 'main-dishes'
+        path: 'main-dishes'
       },
       {
         name: 'Закусончики',
-        id: 'snacks'
+        path: 'snacks'
       },
       {
         name: 'Десерты',
-        id: 'dessert'
+        path: 'dessert'
       },
       {
         name: 'Напитки',
-        id: 'drink'
+        path: 'drink'
       },
     ]
   },
@@ -44,19 +44,19 @@ const categories: Array<Navigation> = [
     category: [
       {
         name: 'Эфирные масла',
-        id: 'ethereal-oil'
+        path: 'ethereal-oil'
       },
       {
         name: 'Гидролаты',
-        id: 'hidrolat'
+        path: 'hidrolat'
       },
       {
         name: 'Рецепты',
-        id: 'ethereal-recipe'
+        path: 'ethereal-recipe'
       },
       {
         name: 'Ольфакторная карта',
-        id: 'olfactory-map'
+        path: 'olfactory-map'
       },
     ]
   }

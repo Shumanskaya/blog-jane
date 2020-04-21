@@ -5,5 +5,5 @@ export interface Navigation {
 
 export interface Category {
   name: string;
-  id: string;
+  path: string;
 }

@@ -1,7 +1,7 @@
 <div class="recipe-short" *ngFor="let rec of recipes">
   <img class="recipe-short__image" src="{{rec.image}}" alt="">
   <div class="recipe-short__content">
-    <a class="recipe-short__subtitle g-subtitle" [routerLink]="['./', rec.id]">{{rec.title}}</a>
+    <a class="recipe-short__subtitle g-subtitle" [routerLink]="[type === 'lastRecipe' ? rec.type.path : './' , rec.id]">{{rec.title}}</a>
     <div class="new-recipe__description">{{rec.description}}
     </div>
     <div class="recipe-short__date"></div>

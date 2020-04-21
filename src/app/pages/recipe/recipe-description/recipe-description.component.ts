@@ -9,6 +9,7 @@ import {RecipeService} from '../recipe.service';
 export class RecipeDescriptionComponent implements OnInit {
 
   public lastRecipes = [];
+  public last = 'lastRecipe';
 
   constructor(private rec: RecipeService) {
     this.lastRecipes = rec.getLastRecipe();

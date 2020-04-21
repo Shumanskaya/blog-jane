@@ -1,15 +1,23 @@
 @import "./src/styles.scss";
 
+.home {
+  height: 100vh;
+  display: flex;
+}
+
 .home__wrapper {
   width: 100%;
+  max-width: 1024px;
+  margin: auto;
   display: flex;
   justify-content: stretch;
+  align-items: center;
   flex-wrap: wrap;
 }
 
 .home__block {
   width: 50%;
-  height: 50vh;
+  height: 45vh;
   display: flex;
   align-items: center;
   justify-content: center;

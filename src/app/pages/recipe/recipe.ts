@@ -1,5 +1,7 @@
+import {Category, Navigation} from '../../component/main-sidenav/navigation';
+
 export interface Recipe {
-  type: TypeRecipe['type'];
+  type: Category;
   id: string;
   title: string;
   description: string;

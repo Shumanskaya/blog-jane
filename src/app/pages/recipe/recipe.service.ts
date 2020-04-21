@@ -6,7 +6,7 @@ import { Recipe } from './recipe';
 })
 export class RecipeService {
   getRecipe = () => allRecipe;
-  getTypeRecipe = (type) => allRecipe.filter(value => value.type === type);
+  getTypeRecipe = (type) => allRecipe.filter(value => value.type.path === type);
   getLastRecipe = () => allRecipe.filter((value, i, arr) => {
     const lastIndex = arr.length - 1;
     return i > lastIndex - 3;
@@ -15,7 +15,10 @@ export class RecipeService {
 
 const allRecipe: Array<Recipe> = [
   {
-    type: 'salad',
+    type: {
+      name: 'Салатики',
+       path: 'salad'
+    },
     id: '1',
     title: 'Крабовый салат',
     description: 'Легкий, прекрасный, а главное - очень дешевый салат',
@@ -54,7 +57,10 @@ const allRecipe: Array<Recipe> = [
     ]
   },
   {
-    type: 'drink',
+    type: {
+      name: 'Напитки',
+      path: 'drink'
+    },
     id: '2',
     title: 'Облепиховый морс',
     description: 'Вкусный, теплый, а главное - безупречно оранжевый',
@@ -93,7 +99,10 @@ const allRecipe: Array<Recipe> = [
     ]
   },
   {
-    type: 'dessert',
+    type: {
+      name: 'Десерты',
+      path: 'dessert'
+    },
     id: '3',
     title: 'Маффин обыкновенный',
     description: 'Воздушный, с кусочками шоколада - так во рту',
@@ -128,7 +137,10 @@ const allRecipe: Array<Recipe> = [
     ]
   },
   {
-    type: 'dessert',
+    type: {
+      name: 'Десерты',
+      path: 'dessert'
+    },
     id: '4',
     title: 'Оладушки',
     description: 'Сытные, жирные - все как надо',
@@ -159,7 +171,10 @@ const allRecipe: Array<Recipe> = [
     ]
   },
   {
-    type: 'soup',
+    type: {
+      name: 'Супчики',
+      path: 'soup'
+    },
     id: '5',
     title: 'Огуречный суп',
     description: 'Легкий, подхожит для жаркого дня. Быстрее окрошки, если у вас есть мясорубка',
@@ -190,7 +205,10 @@ const allRecipe: Array<Recipe> = [
     ]
   },
   {
-    type: 'main-dishes',
+    type: {
+      name: 'Вторые блюда',
+      path: 'main-dishes'
+    },
     id: '6',
     title: 'Нагетсы из свинины',
     description: 'Сытные с быстрые в приготовлении. Главное - купить хорошие панировочные сухари',

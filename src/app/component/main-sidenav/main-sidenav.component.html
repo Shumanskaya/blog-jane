@@ -2,10 +2,14 @@
   <div class="main-sidenav__wrapper main-sidenav__wrapper--{{type}}"
   >
     <div class="main-sidenav__list">
-      <a class="main-sidenav__item"
-         *ngFor="let item of navigation"
-         [routerLink]="['/'+type, item.id]"
-      >{{item.name}}</a>
+      <div class="main-sidenav__item"
+           *ngFor="let item of navigation"
+           [routerLink]="['/'+type, item.path]"
+      >
+        <a class="main-sidenav__link"
+           routerLinkActive="main-sidenav__link--active"
+        >{{item.name}}</a>
+      </div>
     </div>
 
     <div class="btn-wrapper">

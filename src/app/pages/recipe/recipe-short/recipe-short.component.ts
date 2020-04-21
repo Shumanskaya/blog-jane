@@ -15,8 +15,16 @@ export class RecipeShortComponent implements OnInit, OnChanges {
   constructor(private rec: RecipeService) {
   }
 
+  getRecipes(type) {
+    if (type === 'lastRecipe') {
+     this.recipes = this.rec.getLastRecipe();
+    } else {
+      this.recipes = this.rec.getTypeRecipe(type);
+    }
+  }
+
   ngOnChanges(): void {
-    this.recipes = this.rec.getTypeRecipe(this.type);
+    this.getRecipes(this.type);
   }
 
   ngOnInit() {

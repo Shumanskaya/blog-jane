@@ -20,7 +20,7 @@ export class RecipeListComponent implements OnInit, OnChanges {
     this.navigations.filter(nav => {
       if (nav.name === 'recipe') {
         nav.category.filter(cat => {
-          if (cat.id === type) {
+          if (cat.path === type) {
             this.name = cat.name;
           }
         });
