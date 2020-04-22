@@ -4,7 +4,7 @@
        (click)="toggleList()"
        *ngIf="isShort">+</div>
 
-  <div class="fixed-short__fill" *ngIf="!isShort">
+  <div class="fixed-short__fill fixed-short__fill--{{type}}" *ngIf="!isShort">
     <p class="g-subtitle fixed-short__title">{{title}}
       <span class="fixed-short__icon" (click)="toggleList()">X</span>
     </p>

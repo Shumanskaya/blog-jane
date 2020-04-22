@@ -8,6 +8,7 @@ import {Component, OnChanges, OnInit} from '@angular/core';
 export class RecipeComponent implements OnInit, OnChanges {
 
   public type = 'recipe';
+  public title = 'Рецепты';
 
   constructor() {
 

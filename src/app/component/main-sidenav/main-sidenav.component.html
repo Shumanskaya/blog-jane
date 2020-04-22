@@ -13,7 +13,11 @@
     </div>
 
     <div class="btn-wrapper">
-
+      <div class="sidenav-btn"
+           routerLinkActive="sidenav-btn--hidden"
+           [routerLinkActiveOptions]="{exact:true}"
+           [routerLink]="'/'+type">{{title}}
+      </div>
       <div class="sidenav-btn"
            [routerLink]="'/'">Главное меню
       </div>

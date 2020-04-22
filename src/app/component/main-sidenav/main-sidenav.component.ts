@@ -9,6 +9,7 @@ import { NavigationService } from './navigation.service';
 export class MainSidenavComponent implements OnInit {
 
   @Input() type: string;
+  @Input() title: string;
   public navigations;
   public navigation;
 

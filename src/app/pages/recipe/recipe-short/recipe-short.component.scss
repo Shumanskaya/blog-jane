@@ -9,6 +9,9 @@
 
 .recipe-short__image {
   width: 300px;
+  min-width: 300px;
+  height: 200px;
+  object-fit: cover;
   margin-right: 12px;
   border-radius: 4px;
 }
