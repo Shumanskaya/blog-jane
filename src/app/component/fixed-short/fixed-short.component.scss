@@ -1,0 +1,74 @@
+@import "../../../styles";
+
+.fixed-short {
+  position: fixed;
+  left: 0;
+}
+
+.fixed-short__small {
+  width: 40px;
+  height: 40px;
+  margin-left: 9px;
+  border-radius: 50%;
+  background-color: #1A1A1A;
+  cursor: pointer;
+  font-size: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.fixed-short__fill {
+  width: 300px;
+  padding: 12px;
+  background-color: $light-color;
+}
+
+.fixed-short__title {
+  margin-bottom: 18px;
+  position: relative;
+}
+
+.fixed-short__icon {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 12px;
+  margin: auto;
+  cursor: pointer;
+  color: $recipe-second-color;
+}
+
+.fixed-short__item {
+  margin-bottom: 8px;
+  padding-left: 18px;
+  position: relative;
+  display: block;
+}
+
+.fixed-short__item:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+}
+
+/*pages style*/
+
+.fixed-short--recipe {
+  top: 300px;
+}
+
+.fixed-short__small--recipe {
+  background-color: $recipe-second-color;
+  color: $light-color;
+}
+
+.fixed-short__item--recipe:before {
+  background-color: #7D967D;
+}

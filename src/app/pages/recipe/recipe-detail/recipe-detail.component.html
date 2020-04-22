@@ -14,7 +14,7 @@
     <p class="recipe-detail__subtitle g-subtitle">Список продуктов</p>
     <ul class="recipe-detail__list">
       <li class="recipe-detail__item" *ngFor="let list of recipe.structure">{{list.title}}
-        <span> - {{list.quantity}}</span>;
+        <span> - {{list.quantity}}</span>
       </li>
     </ul>
   </div>
@@ -29,4 +29,12 @@
       <img class="image" src="{{step.images}}" alt="">
     </div>
   </div>
+
+  <app-fixed-short
+    [type]="'recipe'"
+    [title]="recipe.title"
+    [list]="recipe.structure"
+  ></app-fixed-short>
+
 </div>
+

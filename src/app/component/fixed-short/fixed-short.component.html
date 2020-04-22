@@ -1,0 +1,17 @@
+<div class="fixed-short fixed-short--{{type}}">
+
+  <div class="fixed-short__small fixed-short__small--{{type}}"
+       (click)="toggleList()"
+       *ngIf="isShort">+</div>
+
+  <div class="fixed-short__fill" *ngIf="!isShort">
+    <p class="g-subtitle fixed-short__title">{{title}}
+      <span class="fixed-short__icon" (click)="toggleList()">X</span>
+    </p>
+    <ul class="fixed-short__list" *ngFor="let item of list">
+      <li class="fixed-short__item fixed-short__item--{{type}}">{{item.title}} -
+        <span>{{item.quantity}}</span>
+      </li>
+    </ul>
+  </div>
+</div>
