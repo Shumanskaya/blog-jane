@@ -1,0 +1,22 @@
+@import "./src/styles.scss";
+
+.olfactory__wrapper {
+  display: flex;
+  width: 100%;
+}
+
+.olfactory__content {
+  width: 100%;
+  max-width: 1224px;
+  padding: 12px;
+}
+
+.olfactory__title {
+  font-size: 1.3rem;
+  margin: 12px 0;
+}
+
+.olfactory__description {
+  font-size: 1rem;
+  margin-bottom: 8px;
+}

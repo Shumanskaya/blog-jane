@@ -8,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class OlfactoryComponent implements OnInit {
 
   public type = 'olfactory';
+  public title = 'Зельеварение';
 
   constructor() { }
 

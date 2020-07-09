@@ -1,0 +1,65 @@
+@import "./src/styles.scss";
+
+.efir-detail__header {
+  margin-bottom: 28px;
+}
+
+.efir-detail__subtitle {
+  width: 100%;
+  margin-bottom: 16px;
+}
+
+.efir-detail__row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 28px;
+}
+
+.efir-detail__menu {
+  width: 30%;
+}
+
+.efir-detail__item {
+  margin-bottom: 12px;
+  display: block;
+  position: relative;
+  padding-left: 22px;
+}
+
+.efir-detail__item:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: $olfactory-second-color;
+}
+
+.efir-detail__image {
+  width: 65%;
+}
+
+.image {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+
+.efir-detail__description {
+  width: 100%;
+}
+
+.image-description {
+  max-width: 200px;
+  object-fit: contain;
+  margin: 0 18px 18px;
+}
+
+.image--left {
+  float: left;
+}

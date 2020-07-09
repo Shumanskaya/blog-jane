@@ -1,0 +1,11 @@
+<div class="ethereal-short__block"
+     [routerLink]="['./', efir.path]"
+     *ngFor="let efir of efirs">
+  <div class="ethereal-short__image">
+    <img class="ethereal-image" src="{{efir.image}}" alt="">
+  </div>
+  <div class="ethereal-short__header">
+    <p class="ethereal-short__title">{{efir.nameRu}}</p>
+    <p class="ethereal-short__desc ethereal-short__title--hidden">{{efir.description}}</p>
+  </div>
+</div>

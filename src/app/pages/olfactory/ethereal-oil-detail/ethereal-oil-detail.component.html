@@ -1,0 +1,32 @@
+<div class="efir-detail__wrapper">
+  <div class="efir-detail__content" *ngFor="let efir of oil; let i = index">
+    <div class="efir-detail__header">
+      <p class="efir-detail__title g-title">{{efir.nameRu}}</p>
+      <p class="efir-detail__subtitle g-subtitle">{{efir.nameLatin}}</p>
+    </div>
+
+    <div class="efir-detail__row">
+      <div class="efir-detail__menu">
+        <div class="efir-detail__list" *ngFor="let item of content">
+          <a class="efir-detail__item"
+             [routerLink]=""
+             fragment="{{item.path}}"
+          >{{item.title}}</a>
+        </div>
+      </div>
+      <div class="efir-detail__image">
+        <img class="image" src="{{efir.image}}" alt="">
+      </div>
+    </div>
+
+    <div class="efir-detail__row" *ngFor="let item of content">
+      <p class="efir-detail__subtitle g-subtitle" [id]="item.path">{{item.title}}</p>
+
+      <div class="efir-detail__description">
+        <img class="image-description image--left" src="{{item.image}}" alt="">
+        <p class="efir-detail__desc">{{item.description}}</p>
+      </div>
+    </div>
+
+  </div>
+</div>

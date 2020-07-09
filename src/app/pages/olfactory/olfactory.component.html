@@ -1,3 +1,11 @@
-<app-main-sidenav
-[type]="type"
-></app-main-sidenav>
+<div class="olfactory">
+  <div class="olfactory__wrapper">
+    <app-main-sidenav
+      [type]="type"
+      [title]="title"
+    ></app-main-sidenav>
+    <div class="olfactory__content">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>

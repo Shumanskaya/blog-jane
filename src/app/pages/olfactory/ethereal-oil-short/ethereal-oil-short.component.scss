@@ -1,0 +1,64 @@
+@import "./src/styles.scss";
+
+.ethereal-short__block {
+  width: 30%;
+  margin: 0 1.5% 18px 1.5%;
+  box-shadow: 2px 2px 4px 2px $olfactory-second-color;
+  position: relative;
+  cursor: pointer;
+}
+
+.ethereal-short__image {
+  width: 100%;
+  height: 300px;
+  position: relative;
+}
+
+.ethereal-short__image:before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  box-shadow: 1px 1px 50px 60px inset $olfactory-second-color;
+  transition: all .5s ease;
+}
+
+.ethereal-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.ethereal-short__header {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 8px;
+}
+
+.ethereal-short__title {
+  color: $olfactory-third-color;
+  font-size: 18px;
+  margin-bottom: 8px;
+}
+
+.ethereal-short__desc {
+  color: $olfactory-third-color;
+  font-size: 12px;
+  overflow: hidden;
+  transition: height .5s ease;
+}
+
+.ethereal-short__title--hidden {
+  height: 0;
+}
+
+.ethereal-short__block:hover .ethereal-short__image:before {
+  box-shadow: 1px 1px 50px 60px inset #1B1B1D,
+  1px -65px 30px 20px inset #1B1B1D;
+}
+
+.ethereal-short__block:hover .ethereal-short__title--hidden {
+  height: 30px;
+}

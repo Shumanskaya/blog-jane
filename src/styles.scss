@@ -4,23 +4,15 @@
 $g-title: 1.7em;
 $g-subtitle: 1.4em;
 
-.g-title {
-  font-family: 'Lora', serif;
-  font-size: $g-title;
-}
-
-.g-subtitle {
-  font-family: 'Lora', serif;
-  font-size: $g-subtitle;
-}
-
 /*recipe*/
 $recipe-main-color: #CABABA;
 $recipe-second-color: #7D967D;
 
 /*olfactory*/
 $olfactory-main-color: #E6C6AC;
-$olfactory-second-color: #759796;
+//$olfactory-second-color: #505257;
+$olfactory-second-color: #1B1B1D;
+$olfactory-third-color: #D0C8B8;
 
 /*travel*/
 $travel-main-color: #729595;
@@ -42,3 +34,14 @@ $light-color: #F2F2F2;
   font-family: 'Roboto', sans-serif;
   color: $font-main-color;
 }
+
+.g-title {
+  font-family: 'Lora', serif;
+  font-size: $g-title;
+}
+
+.g-subtitle {
+  font-family: 'Lora', serif;
+  font-size: $g-subtitle;
+}
+
