@@ -1,52 +1,150 @@
 @import "./src/styles.scss";
 
-.home {
+.site {
+  position: relative;
   height: 100vh;
+  width: 100vw;
+  overflow: hidden;
   display: flex;
+  flex-direction: column;
 }
 
-.home__wrapper {
+//.site:after {
+//  content: "";
+//  position: absolute;
+//  width: 100%;
+//  height: 100%;
+//  bottom: -55px;
+//  right: -38px;
+//  background-image: url('/assets/img/sotas_back.svg');
+//  background-repeat: no-repeat;
+//  background-position: left bottom;
+//  transform: scaleX(-1);
+//  z-index: -1;
+//  opacity: .5;
+//}
+
+.home {
   width: 100%;
-  max-width: 1024px;
+  max-width: 1440px;
   margin: auto;
+}
+
+.menu {
+  width: 50vw;
+  max-width: 630px;
+  height: 50vw;
+  max-height: 590px;
+  margin-top: 20px;
+  position: relative;
+
   display: flex;
-  justify-content: stretch;
-  align-items: center;
   flex-wrap: wrap;
 }
 
-.home__block {
-  width: 50%;
-  height: 45vh;
+.menu__row {
   display: flex;
-  align-items: center;
+  width: 100%;
+}
+
+.menu__row:nth-child(1),
+.menu__row:nth-child(3) {
   justify-content: center;
 }
 
-.home__block-link {
-  min-width: 200px;
-  text-align: left;
+.menu__row:nth-child(2) {
+  margin-left: 33%;
 }
 
-.home__link {
-  color: $light-color;
-  font-size: 1.5rem;
-  text-transform: uppercase;
-  text-decoration: none;
+.menu__row:nth-child(2),
+.menu__row:nth-child(3) {
+  margin-top: -45px;
 }
 
-.home__recipe {
-  background-color: $recipe-main-color;
+.home__wrapper {
+  display: flex;
 }
 
-.home__olfactory {
-  background-color: $olfactory-main-color;
+.honeycomb {
+  width: 17vw;
+  max-width: 201px;
+  height: 20vw;
+  max-height: 235px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 22px;
+  background-image: url("/assets/img/sota.svg");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  margin: 0 5px;
+  transition: all .5s ease;
 }
 
-.home__travel {
-  background-color: $travel-main-color;
+.honeycomb--back {
+  position: relative;
 }
 
-.home__other {
-  background-color: $other-main-color;
+.honeycomb--back::before {
+  content: '';
+  position: absolute;
+  width: 90%;
+  height: 86%;
+  right: 0;
+  mask-image: url("/assets/img/sota.svg");
+  mask-repeat: no-repeat;
+  mask-size: contain;
+}
+
+.honeycomb__link {
+  cursor: pointer;
+}
+
+.honeycomb__link:hover::before {
+  right: auto;
+}
+
+.honeycomb__link:hover .honeycomb__desc{
+  font-weight: 700;
+}
+
+.honeycomb__desc {
+  z-index: 2;
+}
+
+.honeycomb--back:nth-child(1):before {
+  background-color: $first-honey-bg;
+}
+
+.honeycomb--back:nth-child(2):before {
+  background-color: $second-honey-bg;
+}
+
+.honeycomb--back:nth-child(3):before {
+  background-color: $main-honey-bg;
+}
+
+.honeycomb--back:nth-child(4):before {
+  background-color: $second-honey-bg;
+}
+
+.honeycomb--back:nth-child(5):before {
+  background-color: $second-honey-bg;
+}
+
+.honeycomb--back:nth-child(6):before {
+  background-color: $first-honey-bg;
+}
+
+.home__intro {
+  flex: 0 0 50%;
+  align-self: flex-end;
+}
+
+.footer {
+  width: 100%;
+  height: 100px;
+  background: rgb(252,204,0);
+  background: linear-gradient(0deg, rgba(253,187,45,1) 0%, rgba(255,255,255,1) 79%);  margin-top: auto;
 }

@@ -2,7 +2,7 @@
 
 .fixed-short {
   position: fixed;
-  top: 8px;
+  top: 105px;
   right: 12px;
 }
 
@@ -38,7 +38,6 @@
   right: 0;
   margin: auto;
   cursor: pointer;
-  color: $recipe-second-color;
 }
 
 .fixed-short__item {
@@ -67,10 +66,10 @@
 }
 
 .fixed-short__small--recipe {
-  background-color: $recipe-second-color;
+  background-color: $recipe-main-color;
   color: $light-color;
 }
 
 .fixed-short__item--recipe:before {
-  background-color: $recipe-second-color;
+  background-color: $recipe-main-color;
 }

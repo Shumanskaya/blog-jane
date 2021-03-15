@@ -8,7 +8,7 @@ import {OlfactoryComponent} from './pages/olfactory/olfactory.component';
 import {RecipeModule} from './pages/recipe/recipe.module';
 import {OlfactoryModule} from './pages/olfactory/olfactory.module';
 import {MainSidenavModule} from './component/main-sidenav/main-sidenav.module';
-
+import {ComponentModule} from './component/component.module';
 
 @NgModule({
   declarations: [
@@ -22,6 +22,7 @@ import {MainSidenavModule} from './component/main-sidenav/main-sidenav.module';
     RecipeModule,
     OlfactoryModule,
     MainSidenavModule,
+    ComponentModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

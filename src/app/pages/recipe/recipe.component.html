@@ -1,11 +1,12 @@
 <div class="recipe">
-  <div class="recipe__wrapper">
+  <div class="g-page__wrapper">
     <app-main-sidenav
       [type]="type"
       [title]="title"
     ></app-main-sidenav>
-    <div class="recipe__content">
+    <div class="g-page__content">
       <router-outlet></router-outlet>
     </div>
   </div>
+  <app-footer [bgColor]="type"></app-footer>
 </div>

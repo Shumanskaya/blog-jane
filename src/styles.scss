@@ -1,27 +1,38 @@
 /*fonts*/
 
 @import url('https://fonts.googleapis.com/css2?family=Lora&family=Roboto:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Neucha&display=swap');
+
 $g-title: 1.7em;
 $g-subtitle: 1.4em;
+$font-title: 'Neucha', cursive;
 
 /*recipe*/
-$recipe-main-color: #CABABA;
-$recipe-second-color: #7D967D;
+//$recipe-main-color: #CABABA;
+//$recipe-second-color: #7D967D;
+//
+///*olfactory*/
+//$olfactory-main-color: #E6C6AC;
+////$olfactory-second-color: #505257;
+//$olfactory-second-color: #1B1B1D;
+//$olfactory-third-color: #D0C8B8;
+//
+///*travel*/
+//$travel-main-color: #729595;
+//$travel-second-color: #E7C09F;
+//
+///*other*/
+//$other-main-color: #93BF93;
+//$other-second-color: #DE9A9A;
 
-/*olfactory*/
-$olfactory-main-color: #E6C6AC;
-//$olfactory-second-color: #505257;
-$olfactory-second-color: #1B1B1D;
-$olfactory-third-color: #D0C8B8;
+$main-honey-bg: rgb(255, 169, 0);
+$first-honey-bg: rgb(252, 204, 0);
+$second-honey-bg: rgb(254, 225, 1);
 
-/*travel*/
-$travel-main-color: #729595;
-$travel-second-color: #E7C09F;
-
-/*other*/
-$other-main-color: #93BF93;
-$other-second-color: #DE9A9A;
-
+$recipe-main-color: #BFA630;
+$recipe-shadow-color: #ece8d0;
+$olfactory-main-color: #FFCF73;
+$olfactory-shadow-color: #f1e5cf;
 
 /*global*/
 $font-main-color: #1A1A1A;
@@ -45,3 +56,45 @@ $light-color: #F2F2F2;
   font-size: $g-subtitle;
 }
 
+.g-title-font {
+  font-size: 8vw;
+  line-height: 7vw;
+  margin-bottom: 20px;
+  margin-left: 10px;
+  font-family: $font-title;
+}
+
+.g-page__title {
+  margin-left: 350px;
+  font-family: $font-title;
+  font-size: $g-title;
+}
+
+.g-page__wrapper {
+  width: 100%;
+  padding-bottom: 100px;
+}
+
+.g-page__content {
+  width: 100%;
+  max-width: 60%;
+  padding: 12px;
+  margin-left: 340px;
+}
+
+/*back*/
+
+.g-bg--recipe--bottom {
+  background: linear-gradient($recipe-main-color 0%, $recipe-shadow-color 59%, #ffffff 96%);  margin-top: auto;
+}
+
+.g-bg--olfactory--bottom {
+  background: linear-gradient($olfactory-main-color 0%, $olfactory-shadow-color 59%, #ffffff 96%);  margin-top: auto;
+}
+
+.g-bg--recipe--top {
+  background: linear-gradient(0deg, $recipe-main-color 0%, $recipe-shadow-color 59%, #ffffff 96%);  margin-top: auto;
+}
+.g-bg--olfactory--top {
+  background: linear-gradient(0deg, $olfactory-main-color 0%, $olfactory-shadow-color 59%, #ffffff 96%);  margin-top: auto;
+}

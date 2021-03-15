@@ -7,6 +7,7 @@
 .efir-detail__subtitle {
   width: 100%;
   margin-bottom: 16px;
+  border-bottom: 3px solid $olfactory-main-color;
 }
 
 .efir-detail__row {
@@ -25,6 +26,8 @@
   display: block;
   position: relative;
   padding-left: 22px;
+  text-decoration: none;
+  cursor: pointer;
 }
 
 .efir-detail__item:before {
@@ -37,7 +40,13 @@
   width: 12px;
   height: 12px;
   border-radius: 50%;
-  background-color: $olfactory-second-color;
+  background-color: $olfactory-main-color;
+  transition: all .2s ease;
+}
+
+.efir-detail__item:hover:before {
+  width: 14px;
+  height: 14px;
 }
 
 .efir-detail__image {

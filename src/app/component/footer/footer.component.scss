@@ -1,0 +1,28 @@
+@import "./src/styles.scss";
+
+.footer {
+  width: 100%;
+  min-height: 70px;
+  position: fixed;
+  bottom: 0;
+}
+
+.footer__nav {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding-top: 30px;
+}
+
+.footer__nav-link {
+  font-size: 18px;
+  text-decoration: none;
+  margin: 0 16px;
+  cursor: pointer;
+  transition: all .5s ease;
+}
+
+.footer__nav-link:hover {
+  transform: scale(1.1);
+}
+

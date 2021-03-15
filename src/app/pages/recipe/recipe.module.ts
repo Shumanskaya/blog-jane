@@ -9,6 +9,7 @@ import {FixedShortComponent} from '../../component/fixed-short/fixed-short.compo
 import {RouterModule} from '@angular/router';
 import {RecipeDescriptionComponent} from './recipe-description/recipe-description.component';
 import {RecipeContentComponent} from './recipe-content/recipe-content.component';
+import {ComponentModule} from '../../component/component.module';
 
 @NgModule({
   declarations: [
@@ -24,6 +25,7 @@ import {RecipeContentComponent} from './recipe-content/recipe-content.component'
     CommonModule,
     RouterModule,
     MainSidenavModule,
+    ComponentModule,
   ]
 })
 export class RecipeModule {

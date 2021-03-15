@@ -1,24 +1,49 @@
-<div class="home">
-  <div class="home__wrapper">
-    <div class="home__block home__recipe">
-      <div class="home__block-link">
-        <a class="home__link g-title" [routerLink]="['recipe']">Рецепты</a>
+<div class="site">
+  <div class="home">
+    <div class="home__wrapper">
+      <div class="menu">
+        <div class="menu__row">
+          <div class="honeycomb honeycomb__link honeycomb--back" [routerLink]="['recipe']">
+            <p class="honeycomb__desc">Рецепты</p>
+          </div>
+          <div class="honeycomb honeycomb__link honeycomb--back" [routerLink]="['olfactory']">
+            <p class="honeycomb__desc">Зельеварение</p>
+          </div>
+        </div>
+        <div class="menu__row">
+          <div class="honeycomb honeycomb--back"></div>
+          <div class="honeycomb honeycomb__link honeycomb--back">
+            <p class="honeycomb__desc">Путешествия</p>
+          </div>
+        </div>
+        <div class="menu__row">
+          <div class="honeycomb honeycomb__link honeycomb--back">
+            <p class="honeycomb__desc">Разное</p>
+          </div>
+          <div class="honeycomb honeycomb--back"></div>
+        </div>
+      </div>
+      <div class="home__intro">
+        <h1 class="g-title-font">Блог о разном</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae culpa expedita hic mollitia nesciunt odio
+          placeat quis sed vero voluptatem! Adipisci eos explicabo quia voluptatibus? Dignissimos nam obcaecati omnis
+          quo?
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore eligendi inventore necessitatibus nemo
+          nesciunt
+          quidem suscipit vitae. Accusamus aperiam consequuntur eaque fuga nemo odio officia soluta. Distinctio dolore
+          necessitatibus voluptate.
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut autem cumque distinctio hic necessitatibus
+          placeat
+          similique sint. Assumenda delectus dignissimos nesciunt quidem, rerum sunt suscipit tempora ut, vero
+          voluptates
+          voluptatum!</p>
       </div>
     </div>
-    <div class="home__block home__olfactory">
-      <div class="home__block-link">
-        <a class="home__link g-title" [routerLink]="['olfactory']">Зельеварение</a>
-      </div>
-    </div>
-    <div class="home__block home__travel">
-      <div class="home__block-link">
-        <a class="home__link g-title" href="#">Путешествия</a>
-      </div>
-    </div>
-    <div class="home__block home__other">
-      <div class="home__block-link">
-        <a class="home__link g-title" href="#">Разное</a>
-      </div>
-    </div>
+
+  </div>
+
+
+  <div class="footer">
+
   </div>
 </div>

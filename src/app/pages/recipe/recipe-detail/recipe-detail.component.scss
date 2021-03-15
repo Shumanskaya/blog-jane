@@ -12,8 +12,9 @@
   position: relative;
   margin-bottom: 40px;
   padding: 12px;
-  box-shadow: 3px 2px 7px 1px $recipe-main-color;
-  border-radius: 4px;
+  //box-shadow: 3px 2px 7px 1px $recipe-main-color;
+  border: 3px solid $recipe-main-color;
+  //border-radius: 4px;
 }
 
 .recipe-detail__title,
@@ -66,20 +67,19 @@
   width: 8px;
   height: 8px;
   border-radius: 50%;
-  background-color: $recipe-second-color;
+  background-color: $recipe-main-color;
 }
 
 .recipe-detail__number {
   font-size: 22px;
-  //border: 1px solid black;
   border-radius: 50%;
   width: 40px;
   height: 40px;
-  opacity: .8;
+  //opacity: .8;
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: $recipe-second-color;
+  background-color: $recipe-main-color;
   color: white;
   font-weight: bold;
 

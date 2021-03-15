@@ -9,8 +9,8 @@
       <div class="efir-detail__menu">
         <div class="efir-detail__list" *ngFor="let item of content">
           <a class="efir-detail__item"
-             [routerLink]=""
-             fragment="{{item.path}}"
+             appScroll
+             [block]="item.path"
           >{{item.title}}</a>
         </div>
       </div>
@@ -19,8 +19,8 @@
       </div>
     </div>
 
-    <div class="efir-detail__row" *ngFor="let item of content">
-      <p class="efir-detail__subtitle g-subtitle" [id]="item.path">{{item.title}}</p>
+    <div class="efir-detail__row" [id]="item.path" *ngFor="let item of content">
+      <p class="efir-detail__subtitle g-subtitle">{{item.title}}</p>
 
       <div class="efir-detail__description">
         <img class="image-description image--left" src="{{item.image}}" alt="">

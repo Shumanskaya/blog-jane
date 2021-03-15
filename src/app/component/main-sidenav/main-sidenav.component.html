@@ -1,14 +1,18 @@
 <div class="main-sidenav">
-  <div class="main-sidenav__wrapper main-sidenav__wrapper--{{type}}"
-  >
-    <div class="main-sidenav__list">
-      <div class="main-sidenav__item"
-           *ngFor="let item of navigation"
-           [routerLink]="['/'+type, item.path]"
-      >
-        <a class="main-sidenav__link"
-           routerLinkActive="main-sidenav__link--active"
-        >{{item.name}}</a>
+  <div class="main-sidenav__wrapper g-bg--{{type}}--bottom">
+    <div class="main-sidenav__header">
+      <h1 class="g-page__title">{{title}}</h1>
+
+      <div class="main-sidenav__list">
+
+        <div class="main-sidenav__item"
+             *ngFor="let item of navigation"
+             [routerLink]="['/'+type, item.path]"
+             routerLinkActive="main-sidenav__link--active"
+        >
+          <a class="main-sidenav__link"
+          >{{item.name}}</a>
+        </div>
       </div>
     </div>
 

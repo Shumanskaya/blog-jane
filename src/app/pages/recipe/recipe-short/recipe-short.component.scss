@@ -2,7 +2,8 @@
 
 .recipe-short {
   display: flex;
-  box-shadow: 0 0 5px 2px $recipe-main-color;
+  //box-shadow: 0 0 5px 2px $recipe-main-color;
+  border: 3px solid $recipe-main-color;
   padding: 12px;
   margin-top: 16px;
 }
